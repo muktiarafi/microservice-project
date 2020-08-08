@@ -4,3 +4,6 @@
 [submodule "movie-service"]
 	path = movie-service
 	url = https://github.com/muktiarafi/movie-service.git
+[submodule "movies"]
+	path = movies
+	url = https://github.com/muktiarafi/movie-service.git
