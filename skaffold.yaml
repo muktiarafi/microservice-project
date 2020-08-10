@@ -8,11 +8,19 @@ build:
   local:
     push: false
   artifacts:
-    - image: muktiarafi/auth
+    - image: muktiarafi/cinema-auth
       context: auth
       docker:
         dockerfile: Dockerfile
       sync:
         manual:
           - src: 'src/**/*.ts'
+            dest: .
+    - image: muktiarafi/cinema-movies
+      context: movies
+      docker:
+        dockerfile: Dockerfile
+      sync:
+        manual:
+          - src: 'src/**/*.py'
             dest: .
